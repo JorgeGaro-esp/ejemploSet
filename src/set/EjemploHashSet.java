@@ -30,7 +30,6 @@ public class EjemploHashSet {
         for (String fruta : frutas) {
             System.out.println(fruta);
         }
-        
     }
 
 }
