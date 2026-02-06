@@ -17,7 +17,7 @@ import java.util.TreeSet;
  *
  * @author Jorge Garcia Rodriguez
  */
-public class Ejercicio2 {
+public class Ejercicio02 {
 
     /**
      * @param args the command line arguments

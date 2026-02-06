@@ -7,7 +7,6 @@ package set;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -17,7 +16,7 @@ import java.util.TreeSet;
  *
  * @author Jorge Garcia Rodriguez
  */
-public class Ejercicio3 {
+public class Ejercicio01 {
 
     /**
      * @param args the command line arguments
@@ -25,7 +24,7 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         // TODO code application logic here
         List<Integer> lista = List.of(1, 7, 1, 3, 1, 4, 1, 5, 5);
-        Set<Integer> numeros = new TreeSet<>(lista);
+        Set<Integer> numeros = new HashSet<>(lista);
         Iterator it = numeros.iterator();
         while (it.hasNext()) {
             System.out.println(it.next());
@@ -33,4 +32,3 @@ public class Ejercicio3 {
     }
 
 }
-
