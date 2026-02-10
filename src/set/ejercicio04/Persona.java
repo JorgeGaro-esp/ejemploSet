@@ -4,6 +4,8 @@
  */
 package set.ejercicio04;
 
+import java.util.Objects;
+
 /**
  *
  * @author Jorge Garcia Rodriguez
@@ -42,4 +44,28 @@ public class Persona {
     public void mostrar(){
         System.out.println(nombre+"-"+dni);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.dni);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        return Objects.equals(this.dni, other.dni);
+    }
+    
+    
 }
