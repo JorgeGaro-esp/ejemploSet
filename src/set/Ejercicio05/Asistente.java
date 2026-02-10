@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package set.Ejercicio04Persona;
+package set.Ejercicio05;
 
 import java.util.Objects;
 
@@ -10,13 +10,13 @@ import java.util.Objects;
  *
  * @author Jorge Garcia Rodriguez
  */
-public class Persona {
+public class Asistente {
     private String dni;
     private String nombre;
-    
+
     //Constructor
 
-    public Persona(String dni, String nombre) {
+    public Asistente(String dni, String nombre) {
         this.dni = dni;
         this.nombre = nombre;
     }
@@ -41,14 +41,15 @@ public class Persona {
     
     //Metodos
     
-    public void mostrar(){
-        System.out.println(nombre+"-"+dni);
+    @Override
+    public String toString() {
+        return "Asistente{" + "Dni:" + dni + ", Nombre:" + nombre + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.dni);
+        hash = 89 * hash + Objects.hashCode(this.dni);
         return hash;
     }
 
@@ -63,9 +64,11 @@ public class Persona {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Persona other = (Persona) obj;
+        final Asistente other = (Asistente) obj;
         return Objects.equals(this.dni, other.dni);
     }
+    
+    
     
     
 }
